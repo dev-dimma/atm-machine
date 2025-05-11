@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATM Machine With JavaScript</title>
-    <link rel="stylesheet" href="/atm-machine-javascript/src/styles.css" />
+    <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
-    <main class="container">
+    <main class="container" id="container">
       <h2>Enter PIN</h2>
-      <input type="password" placeholder="****" />
-      <button>Continue</button>
+      <input type="password" placeholder="****" id="pin" />
+      <button onclick="setPin()">Continue</button>
     </main>
+    <script src="/src/index.js"></script>
   </body>
 </html>
