@@ -63,7 +63,6 @@ function withdraw() {
   }
 }
 
-
 //Transfer feature
 function transfer() {
   const recipientAccountNumber = prompt(
@@ -77,7 +76,7 @@ function transfer() {
     transferAmount <= balance
   ) {
     const confirmation = alert(
-      Transfer $${transferAmount} to ${recipientAccountNumber}? 
+      `Transfer $${transferAmount} to ${recipientAccountNumber}?`
     );
     if (confirmation) {
       alert(
