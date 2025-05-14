@@ -94,3 +94,28 @@ function transfer() {
 function balanceEnquiry() {
   alert(`Available balance: $${balance.toFixed(2)}`);
 }
+
+//PIN change feature
+function changePin() {
+  const oldPin = prompt("Enter old PIN");
+
+  if (oldPin === userPin) {
+    const newPin = prompt("Enter a new PIN");
+    const confirmedNewPin = prompt("Confirm new PIN");
+
+    if (
+      confirmedNewPin === newPin &&
+      confirmedNewPin !== oldPin &&
+      confirmedNewPin.length === 4
+    ) {
+      userPin = confirmedNewPin;
+      alert("PIN successfully reset.");
+    } else {
+      alert(
+        "You cannot set your old PIN as the new PIN or enter a valid 4-digit PIN"
+      );
+    }
+  } else {
+    alert("Incorrect old PIN! PIN reset failed!");
+  }
+}
