@@ -89,3 +89,8 @@ function transfer() {
     }
   }
 }
+
+//Balance enquiry feature
+function balanceEnquiry() {
+  alert(`Available balance: $${balance.toFixed(2)}`);
+}
