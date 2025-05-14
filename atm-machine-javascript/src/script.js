@@ -1,6 +1,7 @@
 let userPin = null;
 let balance = 5000;
 
+//Pin feature
 function setPin() {
   const pinInput = document.getElementById("pin");
   const pin = pinInput.value.trim();
@@ -39,5 +40,25 @@ function deposit() {
     );
   } else {
     alert("Invalid deposit amount.");
+  }
+}
+
+//Withdrawal logic
+function withdraw() {
+  const amount = prompt("Enter the amount to withdraw:");
+  const numericAmount = parseFloat(amount);
+
+  if (
+    !isNaN(numericAmount) &&
+    numericAmount > 0 &&
+    numericAmount % 10 === 0 &&
+    numericAmount <= balance
+  ) {
+    balance = balance - numericAmount;
+    alert(`
+      Withdrawal succesful! Dispensed: $${numericAmount}. New Balance is $${balance}
+    `);
+  } else {
+    alert("Invalid amount or insufficient funds");
   }
 }
