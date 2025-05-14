@@ -134,3 +134,12 @@ function viewHistory() {
     alert(`Transaction History:\n${transactionHistory.join("\n")}`);
   }
 }
+
+function logout() {
+  userPin = null;
+  balance = 0.0;
+  transactionHistory.length = 0;
+
+  document.getElementById("atm-features-setup").style.display = "none";
+  document.getElementById("pin-setup").style.display = "block";
+}
