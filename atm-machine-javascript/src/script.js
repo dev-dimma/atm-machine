@@ -1,5 +1,6 @@
 let userPin = null;
 let balance = 5000;
+const transactionHistory = [];
 
 //Pin feature
 function setPin() {
@@ -16,7 +17,7 @@ function setPin() {
   }
 }
 
-//Pin confimation feature
+//Pin confirmation feature
 function checkPinAndExecute(actionFunction) {
   const enteredPin = prompt("Enter your PIN:");
   if (enteredPin === userPin) {
@@ -32,7 +33,7 @@ function deposit() {
   const depositAmount = parseFloat(amount);
   if (!isNaN(depositAmount) && depositAmount > 0) {
     balance = balance + depositAmount;
-    // transactionHistory.push(Deposit: $${numericAmount.toFixed(2)});
+    transactionHistory.push(`Deposit: $${depositAmount.toFixed(2)}`);
     alert(
       `Deposit of $${depositAmount.toFixed(
         2
@@ -55,6 +56,7 @@ function withdraw() {
     numericAmount <= balance
   ) {
     balance = balance - numericAmount;
+    transactionHistory.push(`Withdrawal: $${numericAmount.toFixed(2)}`);
     alert(`
       Withdrawal succesful! Dispensed: $${numericAmount}. New Balance is $${balance}
     `);
@@ -75,14 +77,18 @@ function transfer() {
     transferAmount > 0 &&
     transferAmount <= balance
   ) {
-    const confirmation = alert(
+    const confirmation = confirm(
       `Transfer $${transferAmount} to ${recipientAccountNumber}?`
     );
     if (confirmation) {
+      transactionHistory.push(
+        `Transferred $${transferAmount.toFixed(
+          2
+        )} to $${recipientAccountNumber} `
+      );
       alert(
-        `Transfer of $${transferAmount} to $${recipientAccountNumber} succesful. New balance is $${
-          balance - transferAmount
-        } `
+        `Transfer of $${transferAmount} to $${recipientAccountNumber} succesful. New balance is $${(balance -=
+          transferAmount)} `
       );
     } else {
       alert("Insufficient funds! Kindly deposit!");
@@ -117,5 +123,14 @@ function changePin() {
     }
   } else {
     alert("Incorrect old PIN! PIN reset failed!");
+  }
+}
+
+//Transaction history feature
+function viewHistory() {
+  if (transactionHistory.length === 0) {
+    alert("No transaction history available");
+  } else {
+    alert(`Transaction History:\n${transactionHistory.join("\n")}`);
   }
 }
