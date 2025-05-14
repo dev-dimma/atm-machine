@@ -43,7 +43,7 @@ function deposit() {
   }
 }
 
-//Withdrawal logic
+//Withdrawal feature
 function withdraw() {
   const amount = prompt("Enter the amount to withdraw:");
   const numericAmount = parseFloat(amount);
@@ -60,5 +60,33 @@ function withdraw() {
     `);
   } else {
     alert("Invalid amount or insufficient funds");
+  }
+}
+
+
+//Transfer feature
+function transfer() {
+  const recipientAccountNumber = prompt(
+    "Enter the reciepient's account number:"
+  );
+  const transferAmount = parseFloat(prompt("Enter the amount to transfer:"));
+
+  if (
+    !isNaN(transferAmount) &&
+    transferAmount > 0 &&
+    transferAmount <= balance
+  ) {
+    const confirmation = alert(
+      Transfer $${transferAmount} to ${recipientAccountNumber}? 
+    );
+    if (confirmation) {
+      alert(
+        `Transfer of $${transferAmount} to $${recipientAccountNumber} succesful. New balance is $${
+          balance - transferAmount
+        } `
+      );
+    } else {
+      alert("Insufficient funds! Kindly deposit!");
+    }
   }
 }
