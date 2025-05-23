@@ -46,52 +46,64 @@ p {
 body {
   background-color: #1f1f1f;
   color: #fff;
-
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  max-width: 600px;
+/*Welcome page/ pin setup styles*/
+#welcome-page-container {
+  max-width: 320px;
   width: 90%;
-  margin: 10rem auto;
+  margin: 8rem auto;
   text-align: center;
-  background-color: #363636;
-  padding: 2rem 0;
-  border-radius: 10px;
 }
 
-/* Pin Setup Styles*/
+#welcome-page-sub-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.9rem;
+}
 
-#pin-setup h2 {
+#welcome-page-greeting {
+  font-size: 1.7rem;
+  margin-bottom: 1.3rem;
+}
+
+#welcome-page-pin-request {
   color: #fff;
-  font-size: 24px;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
-#pin-setup input {
+#welcome-page-pin-input {
   display: block;
+  width: 80%;
   margin: 0 auto;
   padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
   border: 2px solid #4caf50;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   transition: 0.3s ease-in-out;
   transform: 0.2s ease-in-out;
 }
 
-#pin-setup input:focus {
+#welcome-page-pin-input:focus {
   transform: scale(1.02);
   border: none;
   border: 2px solid #4caf50;
 }
 
-#pin-setup button {
+#welcome-page-proceed {
   display: block;
+  width: 80%;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
   padding: 0.7rem 5rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   color: #fff;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -99,73 +111,279 @@ body {
   background-color: #4caf50;
 }
 
-#pin-setup button:hover {
+#welcome-page-proceed:hover {
   background-color: #45a049;
   transform: scale(1.05);
 }
 
-/*Atm features style */
+/*Menu Page*/
+#atm-features-container {
+  max-width: 320px;
+  width: 90%;
+  margin: 5rem auto;
+}
 
-.atm-features {
-  padding: 20px;
-  margin: 0 1rem;
-  border-radius: 10px;
+#atm-features-container h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+#atm-features-sub-container {
+  border-radius: 0.9rem;
+  padding: 2rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
-  */
 }
 
-.atm-features h2 {
-  color: #fff;
-  font-size: 24px;
-  margin-bottom: 20px;
+#atm-features {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.atm-features button {
+#atm-features button {
+  display: flex;
+  gap: 0.3rem;
   width: 100%;
-  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  padding: 15px;
   color: #fff;
-  background-color: #4caf50;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  background-color: #4caf50;
   transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-button:hover {
+#atm-features button:hover {
   background-color: #45a049;
   transform: scale(1.05);
 }
 
+#changepin {
+  font-size: 0.87rem;
+  padding: 1rem;
+}
+
 #cancel {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.3rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  grid-column: span 2;
   background-color: #ff4d4d;
 }
 
-/*
-@media (min-width: 320px) {
-  .container {
-    width: 20%;
+/*Withdrawal Styles*/
+
+#withdrawal-account-type-container {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+#account-types-container {
+  max-width: 320px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 2.5rem 1rem 2.5rem;
+  border-radius: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#withdrawal-account-type-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+#account-type-button {
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  border: none;
+  background-color: #4caf50;
+}
+
+/*Withdrawal amount*/
+#withdrawal-amounts-container {
+  max-width: 320px;
+  width: 90%;
+  margin: 7rem auto;
+  text-align: center;
+}
+
+#withdrawal-amounts-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+#withdrawal-amounts {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2.1rem 1.6rem 1rem;
+  border-radius: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#amount-button {
+  display: flex;
+  gap: 0.2rem;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  background-color: #4caf50;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#amount-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/*Withdrawal confirmation*/
+#confirm-withdrawal-container {
+  max-width: 320px;
+  width: 90%;
+  margin: 7rem auto;
+  text-align: center;
+}
+
+#confirm-withdrawal-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+#confirm-withdrawal {
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  border-radius: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#confirm-withdrawal button {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #45a049;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#no-withdraw {
+  background-color: #ff4d4d;
+}
+
+#amount-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  #welcome-page-container {
+    max-width: 768px;
+    width: 90%;
+    margin: 8rem auto;
+    text-align: center;
+  }
+
+  #welcome-page-greeting {
+    font-size: 2.3rem;
+    margin-bottom: 1.3rem;
+  }
+
+  #welcome-page-pin-request {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #atm-features-container {
+    max-width: 768px;
+    width: 90%;
+    margin: 5rem auto;
+  }
+
+  #atm-features-container h2 {
+    font-size: 1.7rem;
+  }
+
+  #atm-features-sub-container {
+    padding: 2rem 2rem;
+  }
+
+  #atm-features button {
+    display: flex;
+    gap: 1rem;
+  }
+
+  #account-types-container {
+    max-width: 768px;
+    width: 90%;
     margin: 0 auto;
-    padding: 0;
+    padding: 2rem 3.5rem 1rem 3.5rem;
+    border-radius: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
   }
 
-  /* #pin-setup {
-    padding: 1em;
+  #withdrawal-account-type-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
   }
 
-  #pin-setup input {
-    max-width: 100%;
-    padding: 0.3em 0.5em;
-    margin: 0 auto;
-    margin-bottom: 10px;
+  #withdrawal-amounts-container {
+    max-width: 768px;
   }
 
-  #pin-setup button {
-    max-width: 80%;
-    padding: 0.3em 0.7em;
-    /* margin: 0 auto; */
-/* } */
-/* } */
+  #withdrawal-amounts-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+  }
+
+  #withdrawal-amounts {
+    padding: 2.5rem 2rem 1.5rem;
+  }
+
+  #confirm-withdrawal-container {
+    max-width: 768px;
+    width: 90%;
+    margin: 7rem auto;
+    text-align: center;
+  }
+
+  #confirm-withdrawal-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+  }
+
+  #confirm-withdrawal {
+    padding: 2.5rem 3.5rem 1.5rem 3.5rem;
+  }
+}
