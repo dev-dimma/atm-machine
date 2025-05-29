@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main id="welcome-page-container">
-      <h1 id="welcome-page-greeting">Welcome To Dee Bank</h1>
+    <main class="pin-container">
+      <h1>Welcome To Dee Bank</h1>
 
       <form action="#" id="pin-form">
-        <section id="welcome-page-sub-container">
-          <p id="welcome-page-pin-request">Please enter your pin</p>
+        <section class="pin-sub-container">
+          <p class="pin-request">Please enter your pin</p>
           <input
             type="password"
             placeholder="****"
-            id="welcome-page-pin-input"
+            id="pin-input-id"
+            class="pin-input"
           />
-          <p id="error" style="color: red"></p>
-          <button type="submit" id="welcome-page-proceed">Proceed</button>
+          <p id="error" class="pin-error-div"></p>
+          <button type="submit" class="pin-proceed">Proceed</button>
         </section>
       </form>
     </main>
 
-    <script src="script.js"></script>
+    <script src="/Script/pin.js"></script>
   </body>
 </html>

@@ -11,18 +11,20 @@
     ></script>
   </head>
   <body>
-    <main id="withdrawal-account-type-container">
+    <main class="deposit-account-type-container">
+      <i class="fa-solid fa-arrow-left-long"></i>
       <h2>Select Account Type</h2>
-      <section id="account-types-container">
-        <button id="account-type-button">
+
+      <section class="deposit-accounts-container">
+        <button id="savings-button" class="deposit-accounts-button">
           Savings <i class="fa-solid fa-chevron-right"></i>
         </button>
-        <button id="account-type-button">
+        <button id="current-button" class="deposit-accounts-button">
           Current <i class="fa-solid fa-chevron-right"></i>
         </button>
       </section>
     </main>
-
-    <!-- <script src="script.js"></script> -->
+    <p id="error" class="pin-error-div"></p>
+    <script src="/Script/account.js"></script>
   </body>
 </html>

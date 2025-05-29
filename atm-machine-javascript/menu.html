@@ -11,20 +11,22 @@
     ></script>
   </head>
   <body>
-    <main id="atm-features-container">
+    <main class="menu-container">
       <h2>Please Select An Option</h2>
 
-      <section id="atm-features-sub-container">
-        <section id="atm-features">
+      <section class="menu-sub-container">
+        <section class="menu-features">
           <section>
-            <button><i class="fa-solid fa-chevron-left"></i> Deposit</button>
+            <button class="deposit-btn" id="deposit">
+              <i class="fa-solid fa-chevron-left"></i> Deposit
+            </button>
             <button><i class="fa-solid fa-chevron-left"></i> Transfer</button>
-            <button id="changepin">
+            <button class="change-pin-btn">
               <i class="fa-solid fa-chevron-left"></i> Change PIN
             </button>
           </section>
 
-          <section id="second-atm-features">
+          <section>
             <button>Withdraw <i class="fa-solid fa-chevron-right"></i></button>
             <button>Balance <i class="fa-solid fa-chevron-right"></i></button>
             <button>
@@ -33,10 +35,10 @@
             </button>
           </section>
         </section>
-        <button id="cancel">Cancel</button>
+        <button class="menu-cancel-btn">Cancel</button>
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="/Script/menu.js"></script>
   </body>
 </html>

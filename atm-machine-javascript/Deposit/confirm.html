@@ -5,16 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATM Machine || Deposit Confirmation</title>
     <link rel="stylesheet" href="/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e90d648857.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <main id="confirm-withdrawal-container">
+    <main class="confirmation-container">
+      <header class="confirmation-header">
+        <i class="fas fa-check-circle confirmation-icon"></i>
+        <h2>Deposit Successful</h2>
+      </header>
+
+      <section class="confirmation-details">
+        <div class="detail-row">
+          <p>Account Type:</p>
+          <span id="account-type"></span>
+        </div>
+        <div class="detail-row">
+          <p>Amount Deposited:</p>
+          <span id="deposit-amount"></span>
+        </div>
+        <div class="detail-row">
+          <p>New Balance:</p>
+          <span id="new-balance"></span>
+        </div>
+        <div class="detail-row">
+          <p>Transaction Time:</p>
+          <span id="transaction-time"></span>
+        </div>
+      </section>
+
+      <div class="confirmation-buttons">
+        <button id="print-receipt" class="confirmation-btn">
+          <i class="fas fa-print"></i> Print Receipt
+        </button>
+        <button id="back-to-menu" class="confirmation-btn">
+          <i class="fas fa-home"></i> Back to Menu
+        </button>
+      </div>
+    </main>
+
+    <script src="/Script/confirm.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Machine || Deposit Confirmation</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="confirm-deposit-container">
       <h2>Confirm Deposit?</h2>
-      <section id="confirm-withdrawal">
+      <section class="confirm-deposit">
         <button>Yes</button>
-        <button id="no-withdraw">No</button>
+        <button class="dont-deposit">No</button>
       </section>
     </main>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="/Script/confirm.js"></script>
   </body>
-</html>
+</html> -->

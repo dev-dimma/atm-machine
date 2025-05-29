@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATM Machine || Deposit Amount</title>
     <link rel="stylesheet" href="/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e90d648857.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <main id="welcome-page-container">
-      <h1 id="welcome-page-greeting">Enter Amount To Deposit</h1>
-
-      <form action="">
-        <section id="welcome-page-sub-container">
-          <!-- <p id="welcome-page-pin-request">Please enter your pin</p> -->
+    <main class="deposit-amount-container">
+      <i class="fa-solid fa-arrow-left-long"></i>
+      <form action="#">
+        <h2 class="deposit-amount-request">Enter Amount To Deposit</h2>
+        <section class="deposit-amount-sub-container">
           <input
-            type="password"
-            placeholder="****"
-            id="welcome-page-pin-input"
+            type="number"
+            id="deposit-amount-input"
+            class="deposit-amount-input"
+            min="0"
+            step="0.01"
           />
-          <button id="welcome-page-proceed" onclick="setPin()">Proceed</button>
+          <button class="deposit-amount-btn" id="deposit-amount-btn-id">
+            Proceed
+          </button>
         </section>
+        <p id="error" class="pin-error-div"></p>
       </form>
     </main>
+
+    <script src="/Script/amount.js"></script>
   </body>
 </html>
