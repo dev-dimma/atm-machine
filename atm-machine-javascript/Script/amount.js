@@ -22,7 +22,7 @@ function depositAmount(event) {
   const amountInput = document.getElementById("deposit-amount-input");
   const selectedAccount = localStorage.getItem("selectedAccount");
   const errorDiv = document.getElementById("error");
-  let errorTimeout;
+  // let errorTimeout;
 
   if (!amountInput || !errorDiv) {
     console.error("Required elements not found");
@@ -87,6 +87,7 @@ function showError(errorDiv, message) {
   }, 3000);
 }
 
+//Event listeners
 document.addEventListener("DOMContentLoaded", () => {
   initializeAccountData();
 
@@ -96,4 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error("Deposit button not found");
   }
+});
+
+//Previous page button
+const backButton = document.getElementById("backButton");
+backButton.addEventListener("click", function (event) {
+  window.history.back();
 });

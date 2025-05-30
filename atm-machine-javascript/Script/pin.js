@@ -1,4 +1,5 @@
 let userPin = null;
+let errorTimeout;
 
 //Pin feature
 function setPin(event) {
@@ -6,7 +7,6 @@ function setPin(event) {
   const pinInput = document.getElementById("pin-input-id");
   const pin = pinInput.value.trim();
   const errorDiv = document.getElementById("error");
-  let errorTimeout;
 
   if (pin === "") {
     errorDiv.textContent = "Enter a 4-digit pin";

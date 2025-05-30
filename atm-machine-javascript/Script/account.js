@@ -24,3 +24,9 @@ function depositAccountType() {
 }
 
 document.addEventListener("DOMContentLoaded", depositAccountType);
+
+const backButton = document.getElementById("backButton");
+
+backButton.addEventListener("click", function (event) {
+  window.history.back();
+});

@@ -49,6 +49,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.back-arrow {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 0.6rem;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /*Pin Mobile Styles*/
 .pin-container {
   max-width: 320px;
@@ -208,7 +228,7 @@ body {
 /*Deposit Accounts Mobile Syles*/
 .deposit-account-type-container {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
 .deposit-account-type-container h2 {
@@ -251,7 +271,7 @@ body {
 .deposit-amount-container {
   max-width: 320px;
   width: 90%;
-  margin: 10rem auto;
+  margin: 12rem auto;
   text-align: center;
 }
 
@@ -273,12 +293,24 @@ body {
   border-bottom: 2px solid #4caf50;
   outline: none;
   color: #fff;
+  text-align: center;
   font-size: 1.2rem;
   padding: 0.7rem;
   margin-bottom: 1.5rem;
   background: transparent;
 }
 
+.pin-error-div {
+  width: 90%;
+  display: none;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  background-color: #ff4d4d;
+}
 .deposit-amount-btn {
   width: 90%;
   cursor: pointer;
@@ -382,7 +414,7 @@ body {
   }
 
   body {
-    background: #fff;
+    background: #1f1f1f;
   }
 
   .confirmation-container {
@@ -438,12 +470,28 @@ body {
 .w-amounts-container {
   max-width: 320px;
   width: 90%;
-  margin: 6rem auto;
+  margin: 4rem auto;
   text-align: center;
 }
 
 .w-amounts-container h2 {
   margin-bottom: 1.5rem;
+}
+
+.withdrawal-amounts input {
+  display: block;
+  align-self: start;
+  justify-self: start;
+  grid-column: 1 / -1;
+  width: 80%;
+  height: auto;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  background: transparent;
+  border-bottom: 2px solid #4caf50;
 }
 
 .withdrawal-amounts {
@@ -546,18 +594,17 @@ HBHBHDBHLDSBLs*/
   }
 
   /*Deposit Confirmation Desktop Styles*/
-  .confirm-deposit-container {
+  .confirmation-container {
     max-width: 768px;
-    width: 90%;
-    margin: 11rem auto;
+    margin: 1rem auto;
   }
 
-  .confirm-deposit-container h2 {
+  .confirmation-header h2 {
     font-size: 1.7rem;
   }
 
-  .confirm-deposit {
-    padding: 2rem 3.2rem;
+  .confirmation-icon {
+    font-size: 3.5rem;
   }
 
   /*Withdrawal Account Desktop Styles*/
