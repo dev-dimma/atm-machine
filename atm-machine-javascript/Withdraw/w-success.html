@@ -3,207 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATM Machine || Withdrawal Successful</title>
+    <title>ATM Machine || Withdrawal Confirmation</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e90d648857.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="confirmation-container">
-      <i class="fas fa-check-circle confirmation-icon"></i>
-      <h2>Withdrawal Successful</h2>
+    <main class="confirmation-container">
+      <header class="confirmation-header">
+        <i class="fas fa-check-circle confirmation-icon"></i>
+        <h2>Withdrawal Successful</h2>
+      </header>
 
-      <div class="transaction-details">
+      <section class="confirmation-details">
         <div class="detail-row">
-          <span class="detail-label">Account Type:</span>
-          <span class="detail-value" id="account-type">Savings</span>
+          <p>Account Type:</p>
+          <span id="w-account-type"></span>
         </div>
         <div class="detail-row">
-          <span class="detail-label">Amount Withdrawn:</span>
-          <span class="detail-value amount" id="withdrawal-amount"
-            >$500.00</span
-          >
+          <p>Amount Withdrawn:</p>
+          <span id="w-withdrawal-amount"></span>
         </div>
         <div class="detail-row">
-          <span class="detail-label">New Balance:</span>
-          <span class="detail-value" id="new-balance">$2,450.00</span>
+          <p>New Balance:</p>
+          <span id="w-new-balance"></span>
         </div>
         <div class="detail-row">
-          <span class="detail-label">Transaction Time:</span>
-          <span class="detail-value" id="transaction-time"
-            >May 28, 2023 14:30</span
-          >
+          <p>Transaction Time:</p>
+          <span id="w-transaction-time"></span>
         </div>
-        <div class="detail-row">
-          <span class="detail-label">Transaction ID:</span>
-          <span class="detail-value" id="transaction-id">WDR789456123</span>
-        </div>
-      </div>
+      </section>
 
-      <div class="action-buttons">
-        <button class="btn btn-print" id="print-receipt">
+      <div class="confirmation-buttons">
+        <button id="w-print-receipt" class="confirmation-btn">
           <i class="fas fa-print"></i> Print Receipt
         </button>
-        <button class="btn btn-menu" id="back-to-menu">
+        <button id="w-back-to-menu" class="confirmation-btn">
           <i class="fas fa-home"></i> Back to Menu
         </button>
       </div>
-    </div>
+    </main>
+
+    <script src="/Script/w-success.js"></script>
   </body>
 </html>
-
-<!-- <style>
-          body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f7fa;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-          }
-
-          .confirmation-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 450px;
-            padding: 30px;
-            text-align: center;
-          }
-
-          .confirmation-icon {
-            color: #4caf50;
-            font-size: 60px;
-            margin-bottom: 20px;
-          }
-
-          h2 {
-            color: #333;
-            margin-bottom: 25px;
-          }
-
-          .transaction-details {
-            background: #f9f9f9;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-            text-align: left;
-          }
-
-          .detail-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 12px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #eee;
-          }
-
-          .detail-row:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-          }
-
-          .detail-label {
-            color: #666;
-            font-weight: 500;
-          }
-
-          .detail-value {
-            color: #333;
-            font-weight: 600;
-          }
-
-          .amount {
-            color: #e53935;
-            font-size: 1.2em;
-          }
-
-          .action-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-          }
-
-          .btn {
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: all 0.3s;
-            border: none;
-          }
-
-          .btn-print {
-            background-color: #2196f3;
-            color: white;
-          }
-
-          .btn-menu {
-            background-color: #f1f1f1;
-            color: #333;
-          }
-
-          .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          }
-
-          @media print {
-            .action-buttons {
-              display: none;
-            }
-
-            body {
-              background: white;
-              padding: 0;
-            }
-          }
-        </style> -->
-
-<!-- <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            // Get transaction data from localStorage
-            const transaction = JSON.parse(
-              localStorage.getItem("lastWithdrawal")
-            );
-
-            if (transaction) {
-              // Populate transaction details
-              document.getElementById("account-type").textContent =
-                transaction.account;
-              document.getElementById(
-                "withdrawal-amount"
-              ).textContent = `$${transaction.amount}`;
-              document.getElementById(
-                "new-balance"
-              ).textContent = `$${transaction.newBalance}`;
-              document.getElementById("transaction-time").textContent =
-                transaction.timestamp;
-              document.getElementById("transaction-id").textContent =
-                transaction.id ||
-                "WDR" + Math.floor(Math.random() * 1000000000);
-            } else {
-              // If no data found, redirect to withdrawal page
-              window.location.href = "withdrawal.html";
-            }
-
-            // Print receipt functionality
-            document
-              .getElementById("print-receipt")
-              .addEventListener("click", function () {
-                window.print();
-              });
-
-            // Back to menu functionality
-            document
-              .getElementById("back-to-menu")
-              .addEventListener("click", function () {
-                window.location.href = "menu.html";
-              });
-          });
-        </script> -->

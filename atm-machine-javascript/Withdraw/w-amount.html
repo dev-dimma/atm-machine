@@ -12,11 +12,14 @@
   </head>
   <body>
     <main class="w-amounts-container">
-      <i class="fa-solid fa-arrow-left-long"></i>
+      <button id="backButton" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
       <h2>Enter Amount To Withdraw</h2>
 
-      <section class="withdrawal-amounts">
-        <input type="text" placeholder="Enter amount" />
+      <section id="w-amount-btns" class="withdrawal-amounts">
+        <input type="text" id="w-amount-input" placeholder="Enter amount" />
         <section>
           <button><i class="fa-solid fa-chevron-left"></i> 1000</button>
           <button><i class="fa-solid fa-chevron-left"></i> 2000</button>
@@ -28,9 +31,15 @@
           <button>20000 <i class="fa-solid fa-chevron-right"></i></button>
           <button>50000 <i class="fa-solid fa-chevron-right"></i></button>
         </section>
+
+        <p id="error" class="w-error-div"></p>
+        <p id="processing-message" class="processing-message"></p>
+        <button id="proceed-btn" class="withdrawal-proceed-button">
+          Proceed
+        </button>
       </section>
     </main>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="/Script/w-amount.js"></script>
   </body>
 </html>

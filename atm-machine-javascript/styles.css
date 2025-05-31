@@ -470,7 +470,7 @@ body {
 .w-amounts-container {
   max-width: 320px;
   width: 90%;
-  margin: 4rem auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
@@ -492,6 +492,17 @@ body {
   text-align: center;
   background: transparent;
   border-bottom: 2px solid #4caf50;
+}
+
+.withdrawal-proceed-button {
+  display: block;
+  align-self: start;
+  justify-self: start;
+  grid-column: 1 / -1;
+  width: 80%;
+  height: auto;
+  border: none;
+  text-align: center;
 }
 
 .withdrawal-amounts {
@@ -520,12 +531,71 @@ body {
   transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-/*
-dhbbBBHsdd
-asdvdJHHHHBBBBBBBB
-hdbhvchlbchlhDc
-DBHBDBHJBEdhbhb
-HBHBHDBHLDSBLs*/
+.withdrawal-amounts button:last-child {
+  margin-bottom: 0;
+}
+
+.withdrawal-amounts button:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+.w-error-div {
+  width: 100%;
+  display: none;
+  height: auto;
+  border: none;
+  color: #fff;
+  grid-column: 1 / -1;
+  text-align: center;
+  align-self: start;
+  justify-self: start;
+  margin: 0 auto;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  background-color: #ff4d4d;
+}
+
+.processing-message {
+  width: 100%;
+  display: none;
+  height: auto;
+  border: none;
+  color: #fff;
+  min-height: 1.5em;
+  grid-column: 1 / -1;
+  text-align: center;
+  align-self: start;
+  justify-self: start;
+  margin: 0 auto;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  background-color: #0b7dda;
+}
+
+#w-print-receipt {
+  background: #2196f3;
+}
+
+#w-print-receipt:hover {
+  background: #0b7dda;
+}
+
+@media print {
+  .confirmation-buttons {
+    display: none;
+  }
+
+  body {
+    background: #1f1f1f;
+  }
+
+  .confirmation-container {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
 
 @media (min-width: 768px) {
   /*Pin Desktop Version styles*/
@@ -619,7 +689,8 @@ HBHBHDBHLDSBLs*/
   /*Withdrawal Amount Desktop Styles*/
   .w-amounts-container {
     max-width: 768px;
-    padding: 3rem;
+    /* padding: 3rem; */
+    margin: 2rem auto;
   }
 
   .w-amounts-container h2 {

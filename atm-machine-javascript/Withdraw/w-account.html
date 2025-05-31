@@ -12,18 +12,26 @@
   </head>
   <body>
     <main class="w-account-type-container">
-      <i class="fa-solid fa-arrow-left-long"></i>
+      <button id="backButton" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
       <h2>Select Account Type</h2>
 
       <section class="w-accounts-container">
-        <button>Savings <i class="fa-solid fa-chevron-right"></i></button>
-        <button>Current <i class="fa-solid fa-chevron-right"></i></button>
-        <button class="last-w-accounts-button">
+        <button id="savings-button">
+          Savings <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button id="current-button">
+          Current <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button id="credit-button" class="last-w-accounts-button">
           Credit <i class="fa-solid fa-chevron-right"></i>
         </button>
       </section>
     </main>
+    <p id="error" class="pin-error-div"></p>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="/Script/w-account.js"></script>
   </body>
 </html>
