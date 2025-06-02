@@ -19,3 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+//Change PIN Feature
+document.addEventListener("DOMContentLoaded", function () {
+  const changePinBtn = document.getElementById("change-pin-btn");
+
+  if (changePinBtn) {
+    changePinBtn.addEventListener("click", function () {
+      window.location.href = "/Change pin/change-pin.html";
+    });
+  }
+});
+
+//Cancel Button
+document.addEventListener("DOMContentLoaded", function () {
+  const cancelBtn = document.getElementById("menu-cancel-btn");
+
+  if (cancelBtn) {
+    cancelBtn.addEventListener("click", function () {
+      window.location.href = "/index.html";
+    });
+  }
+});

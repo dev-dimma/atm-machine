@@ -597,6 +597,94 @@ body {
   }
 }
 
+/*PIN Change Mobile Styles*/
+.pin-change-container {
+  max-width: 320px;
+  width: 90%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.pin-change-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.pin-change-sub-container {
+  border-radius: 0.9rem;
+  padding: 2.1rem 1.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+}
+
+.input-group input:hover {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.pin-error-message {
+  color: #fff;
+  margin: 0 auto;
+  visibility: hidden;
+  margin-bottom: 1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #e74c3c;
+}
+
+.pin-error-message.show {
+  visibility: visible;
+}
+
+.pin-error-message.success {
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+}
+
+.pin-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.pin-submit-btn:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+.pin-submit-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
 @media (min-width: 768px) {
   /*Pin Desktop Version styles*/
   .pin-container {
@@ -689,7 +777,6 @@ body {
   /*Withdrawal Amount Desktop Styles*/
   .w-amounts-container {
     max-width: 768px;
-    /* padding: 3rem; */
     margin: 2rem auto;
   }
 
@@ -697,7 +784,16 @@ body {
     font-size: 1.7rem;
   }
 
-  #account-types-container {
+  /*PIN Change Desktop Styles*/
+  .pin-change-container {
+    max-width: 768px;
+  }
+
+  .pin-change-container h2 {
+    font-size: 1.7rem;
+  }
+
+  /* #account-types-container {
     max-width: 768px;
     width: 90%;
     margin: 0 auto;
@@ -739,5 +835,5 @@ body {
 
   #confirm-withdrawal {
     padding: 2.5rem 3.5rem 1.5rem 3.5rem;
-  }
+  } */
 }

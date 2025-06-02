@@ -62,12 +62,6 @@ proceedButton.addEventListener("click", () => {
     return;
   }
 
-  // localStorage.setItem("withdrawalAmount", amount);
-  // localStorage.setItem("accountType", "Savings");
-  // const initialBalance = 100000;
-  // const newBalance = initialBalance - amount;
-  // localStorage.setItem("newBalance", newBalance);
-
   processingMessage.textContent = "Processing Withdrawal...";
   processingMessage.style.display = "block";
   proceedButton.disabled = true;
@@ -87,42 +81,6 @@ proceedButton.addEventListener("click", () => {
     }, 3000);
   }
 });
-
-// proceedButton.addEventListener("click", () => {
-//   const amount = parseFloat(amountInput.value);
-
-//   // Validate amount
-//   if (!amount || amount <= 0 || amount > 50000 || amount % 1000 !== 0) {
-//     showError("Invalid amount");
-//     return;
-//   }
-
-//   // Calculate new balance dynamically
-//   const currentBalance =
-//     parseInt(localStorage.getItem("currentBalance")) || 100000;
-//   const newBalance = currentBalance - amount;
-
-//   // Save to localStorage
-//   try {
-//     localStorage.setItem("withdrawalAmount", amount);
-//     localStorage.setItem("accountType", "Savings");
-//     localStorage.setItem("newBalance", newBalance);
-//     localStorage.setItem("currentBalance", newBalance); // Update for future transactions
-//   } catch (error) {
-//     console.error("LocalStorage error:", error);
-//     // Fallback: Redirect with URL parameters
-//     window.location.href = `w-success.html?amount=${amount}&balance=${newBalance}`;
-//     return;
-//   }
-
-//   // Update UI and redirect
-//   processingMessage.textContent = "Processing Withdrawal...";
-//   processingMessage.style.display = "block";
-//   proceedButton.disabled = true;
-//   setTimeout(() => {
-//     window.location.href = "w-success.html";
-//   }, 3000);
-// });
 
 //Previous page button
 const backButton = document.getElementById("backButton");

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Machine - Change PIN</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="pin-change-container">
+      <button id="backButton" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h2>Change Your PIN</h2>
+
+      <section class="pin-change-sub-container">
+        <div class="input-group">
+          <label for="current-pin">Current PIN</label>
+          <input
+            type="password"
+            id="current-pin"
+            maxlength="4"
+            placeholder="Enter current PIN"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="new-pin">New PIN</label>
+          <input
+            type="password"
+            id="new-pin"
+            maxlength="4"
+            placeholder="Enter new PIN"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="confirm-pin">Confirm New PIN</label>
+          <input
+            type="password"
+            id="confirm-pin"
+            maxlength="4"
+            placeholder="Confirm new PIN"
+          />
+        </div>
+
+        <p id="error" class="pin-error-message"></p>
+
+        <button id="change-pin-btn" class="pin-submit-btn">Change PIN</button>
+      </section>
+    </main>
+
+    <script src="/Script/pin-change.js"></script>
+  </body>
+</html>
