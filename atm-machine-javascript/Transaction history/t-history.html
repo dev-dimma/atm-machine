@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Machine || Transaction History</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e90d648857.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="history-container">
+      <button id="backButton" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
+      <h2>Transaction History</h2>
+      <section class="h-sub-container">
+        <p class="h-current-bal">
+          Current Balance: <span id="current-balance">0.00</span>
+        </p>
+        <ul class="transaction-list" id="transactionList"></ul>
+        <button class="clear-history" onclick="clearHistory()">
+          Clear History
+        </button>
+      </section>
+    </main>
+
+    <script src="/Script/check-balance.js"></script>
+    <script src="/Script/t-history.js"></script>
+  </body>
+</html>

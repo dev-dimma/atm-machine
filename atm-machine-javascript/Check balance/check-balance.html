@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Machine || Account Balance</title>
+    <link rel="stylesheet" href="/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="balance-container">
+      <button id="backButton" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
+      <h2>Your Account Balance</h2>
+
+      <div class="balance-display">
+        <p id="balance-amount">Loading...</p>
+      </div>
+
+      <p id="error" class="error-message"></p>
+    </main>
+
+    <script src="/Script/check-balance.js"></script>
+  </body>
+</html>

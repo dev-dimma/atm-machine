@@ -1,4 +1,3 @@
-//Deposit feature
 document.addEventListener("DOMContentLoaded", function () {
   const depositBtn = document.getElementById("deposit");
 
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//Withdrawal Feature
 document.addEventListener("DOMContentLoaded", function () {
   const withdrawalBtn = document.getElementById("withdrawal");
 
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//Change PIN Feature
 document.addEventListener("DOMContentLoaded", function () {
   const changePinBtn = document.getElementById("change-pin-btn");
 
@@ -31,7 +28,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//Cancel Button
+document.addEventListener("DOMContentLoaded", function () {
+  const checkBalance = document.getElementById("check-balance");
+
+  if (checkBalance) {
+    checkBalance.addEventListener("click", function () {
+      window.location.href = "/Check balance/check-balance.html";
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const transferBtn = document.getElementById("transfer");
+
+  if (transferBtn) {
+    transferBtn.addEventListener("click", function () {
+      window.location.href = "/Transfer/transfer.html";
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const historyBtn = document.getElementById("history");
+
+  if (historyBtn) {
+    historyBtn.addEventListener("click", function () {
+      window.location.href = "/Transaction history/t-history.html";
+    });
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const cancelBtn = document.getElementById("menu-cancel-btn");
 

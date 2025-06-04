@@ -1,5 +1,3 @@
-//Withdrawal Feature
-
 function withdrawalAccountType() {
   const savingsBtn = document.getElementById("savings-button");
   const currentBtn = document.getElementById("current-button");

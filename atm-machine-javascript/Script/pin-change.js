@@ -66,7 +66,7 @@ function showError(message, type = "error") {
   const errorDiv = document.getElementById("error");
 
   errorDiv.textContent = message;
-  errorDiv.className = "pin-error-message"; // Reset classes
+  errorDiv.className = "pin-error-message";
 
   if (type === "error") {
     errorDiv.classList.add("show");

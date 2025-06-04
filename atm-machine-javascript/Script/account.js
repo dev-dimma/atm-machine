@@ -1,8 +1,8 @@
-//Deposit Feature
-function depositAccountType() {
+document.addEventListener("DOMContentLoaded", function () {
   const savingsBtn = document.getElementById("savings-button");
   const currentBtn = document.getElementById("current-button");
   const errorDiv = document.getElementById("error");
+  const backButton = document.getElementById("backButton");
 
   if (savingsBtn) {
     savingsBtn.addEventListener("click", function () {
@@ -21,12 +21,10 @@ function depositAccountType() {
   } else {
     errorDiv.textContent = "Current button not found.";
   }
-}
 
-document.addEventListener("DOMContentLoaded", depositAccountType);
-
-const backButton = document.getElementById("backButton");
-
-backButton.addEventListener("click", function (event) {
-  window.history.back();
+  if (backButton) {
+    backButton.addEventListener("click", function () {
+      window.location.href = "/menu.html";
+    });
+  }
 });

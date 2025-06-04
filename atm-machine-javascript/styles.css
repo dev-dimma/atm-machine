@@ -574,6 +574,19 @@ body {
   background-color: #0b7dda;
 }
 
+.w-error-div.show,
+.processing-message.show {
+  display: block;
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+}
+.negative {
+  /* background-color: #f44336; */
+  color: #fff;
+}
+
 #w-print-receipt {
   background: #2196f3;
 }
@@ -685,6 +698,220 @@ body {
   cursor: not-allowed;
 }
 
+/*Check Balance Mobile Styles*/
+.balance-container {
+  max-width: 320px;
+  margin: 10rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.balance-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.balance-display {
+  padding: 2rem;
+  border-radius: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#balance-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+/*Transfer Mobile Styles*/
+.transfer-container {
+  max-width: 320px;
+  width: 90%;
+  margin: 3.5rem auto;
+}
+
+.transfer-container h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#cancelTransfer {
+  background: #ff6b6b;
+  color: white;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#cancelTransfer:hover {
+  background: #ff6b6b;
+  transform: scale(1.05);
+}
+
+#confirmTransfer {
+  background: #4caf50;
+  color: white;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#confirmTransfer:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+#transferMessage {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.error {
+  background: #ffebee;
+  color: #f44336;
+}
+
+.success {
+  background: #e8f5e9;
+  color: #4caf50;
+}
+
+/* Transaction History Mobile Styles */
+.history-container {
+  max-width: 320px;
+  width: 90%;
+  margin: 5rem auto;
+}
+
+.history-container h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.h-sub-container {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+.h-current-bal {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.transaction-item:hover {
+  background-color: #555;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-date {
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.transaction-type {
+  font-weight: bold;
+  color: #3498db;
+}
+
+.transaction-amount {
+  font-size: 1em;
+  color: #27ae60;
+}
+
+.transaction-amount.negative {
+  color: #c0392b;
+}
+
+.transaction-balance {
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.no-transactions {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 20px;
+}
+
+.clear-history {
+  background-color: #4caf50;
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.clear-history:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
 @media (min-width: 768px) {
   /*Pin Desktop Version styles*/
   .pin-container {
@@ -705,7 +932,7 @@ body {
     margin-bottom: 1rem;
   }
 
-  /*Menu Mobile Version Styles*/
+  /*Menu Desktop Version Styles*/
   .menu-container {
     max-width: 768px;
     width: 90%;
@@ -793,47 +1020,41 @@ body {
     font-size: 1.7rem;
   }
 
-  /* #account-types-container {
+  /*Check Balance Desktop Styles*/
+  .balance-container {
     max-width: 768px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 3.5rem 1rem 3.5rem;
-    border-radius: 0.9rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  #withdrawal-account-type-container h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.7rem;
-  }
-
-  #withdrawal-amounts-container {
-    max-width: 768px;
-  }
-
-  #withdrawal-amounts-container h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.7rem;
-  }
-
-  #withdrawal-amounts {
-    padding: 2.5rem 2rem 1.5rem;
-  }
-
-  #confirm-withdrawal-container {
-    max-width: 768px;
-    width: 90%;
-    margin: 7rem auto;
+    margin: 10rem auto;
+    padding: 1rem;
     text-align: center;
   }
 
-  #confirm-withdrawal-container h2 {
-    margin-bottom: 1.5rem;
+  .balance-container h2 {
     font-size: 1.7rem;
   }
 
-  #confirm-withdrawal {
-    padding: 2.5rem 3.5rem 1.5rem 3.5rem;
-  } */
+  #balance-amount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4caf50;
+  }
+
+  /*Transfer Desktop Styles*/
+  .transfer-container {
+    max-width: 768px;
+    width: 90%;
+    margin: 3.5rem auto;
+  }
+
+  .transfer-container h2 {
+    font-size: 1.7rem;
+  }
+
+  /* Transaction History Desktop Styles */
+  .history-container {
+    max-width: 768px;
+  }
+
+  .history-container h2 {
+    font-size: 1.7rem;
+  }
 }

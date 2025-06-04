@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Machine || Transfer</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="transfer-container">
+      <button id="backButton" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h2>Transfer Funds</h2>
+
+      <form class="transfer-form">
+        <section class="form-group">
+          <label>From Account:</label>
+          <select id="fromAccount" required>
+            <option value="" disabled selected>Select Account</option>
+            <option value="Savings">Savings</option>
+            <option value="Current">Current</option>
+            <option value="Credit">Credit</option>
+          </select>
+        </section>
+
+        <section class="form-group">
+          <label>To Account:</label>
+          <input
+            type="text"
+            id="toAccount"
+            placeholder="Account Number"
+            required
+          />
+        </section>
+
+        <section class="form-group">
+          <label>Amount:</label>
+          <input
+            type="number"
+            id="transferAmount"
+            placeholder="0.00"
+            min="1"
+            step="0.01"
+            required
+          />
+        </section>
+
+        <section class="button-group">
+          <button type="button" id="cancelTransfer">Cancel</button>
+          <button type="button" id="confirmTransfer">Transfer</button>
+        </section>
+
+        <p id="transferMessage" class="transfer-message"></p>
+      </form>
+    </main>
+
+    <script src="/Script/check-balance.js"></script>
+    <script src="/Script/t-history.js"></script>
+    <script src="/Script/transfer.js"></script>
+  </body>
+</html>
