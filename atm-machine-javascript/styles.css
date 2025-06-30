@@ -915,14 +915,14 @@ body {
 @media (min-width: 768px) {
   /*Pin Desktop Version styles*/
   .pin-container {
-    max-width: 768px;
+    max-width: 1000px;
     width: 90%;
     margin: 10rem auto;
     text-align: center;
   }
 
   .pin-container h1 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     margin-bottom: 1.3rem;
   }
 
@@ -934,13 +934,14 @@ body {
 
   /*Menu Desktop Version Styles*/
   .menu-container {
-    max-width: 768px;
+    max-width: 1000px;
+    max-height: 1000px;
     width: 90%;
     margin: 8rem auto;
   }
 
   .menu-container h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 
   .menu-sub-container {
