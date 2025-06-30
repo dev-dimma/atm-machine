@@ -2,6 +2,10 @@
 
 A responsive, modern ATM Machine simulation built with vanilla JavaScript, HTML, and CSS. This project demonstrates core ATM functionalities such as PIN authentication, deposits, withdrawals, balance checks, transfers, and transaction history, all in a user-friendly web interface.
 
+## Desktop Screenshot
+
+![](/img/atm-desktop.jpg)
+
 ---
 
 ## Features
@@ -17,11 +21,13 @@ A responsive, modern ATM Machine simulation built with vanilla JavaScript, HTML,
 
 ---
 
-## Screenshots
+## Mobile Screenshot
 
-| Mobile View                               | Desktop View                                |
-| ----------------------------------------- | ------------------------------------------- |
-| ![Mobile Screenshot](/img/atm-mobile.jpg) | ![Desktop Screenshot](/img/atm-desktop.jpg) |
+![](/img/atm-mobile.jpg)
+
+### Links
+
+- [Live Site](https://atm-machine-javascript.vercel.app/)
 
 ---
 
