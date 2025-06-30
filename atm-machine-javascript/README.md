@@ -107,4 +107,4 @@ Issues and pull requests are welcome! Please open an issue for bugs or feature r
 
 ---
 
-**Enjoy using the ATM Machine simulation!**---
+**Enjoy using the ATM Machine simulation!**
